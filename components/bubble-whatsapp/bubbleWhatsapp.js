@@ -4,7 +4,7 @@ import React from 'react'
 function BubbleWhatsapp() {
   
   function redirect(){
-    window.open(`https://wa.me/${process.env.NEXT_PUBLIC_CELLPHONE_WHATSAPP}?text=¿Estás listo para conocer a tu nuevo amigo?`,'_blank')
+    window.open(`https://wa.me/`+process.env.NEXT_PUBLIC_CELLPHONE_WHATSAPP+`?text=¿Estás listo para conocer a tu nuevo amigo?`,'_blank')
   }
 
   function toggleChat(){
