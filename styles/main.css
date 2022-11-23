@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    /* INPUT TEXT */
+    .nge-float-label {
+        height: 50px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+      
+    .nge-float-label label{
+        position: absolute;
+        left: 0;
+        padding: 0 theme(padding.4);
+        pointer-events: none;
+        color: theme('colors.gray-dark');
+        transition: all .5s ease;
+    }
+
+    .nge-float-label input:focus + label , .nge-float-label input:valid + label
+    {
+        transform: translateY(-50%);
+    }
+
+    /* TEXT AREA */
+    .nge-float-label-textarea {
+        height: 180px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nge-float-label-textarea label{
+        position: absolute;
+        left: 0;
+        padding: 0 theme(padding.4);
+        pointer-events: none;
+        color: theme('colors.gray-dark');
+        transition: all .5s ease;
+    }
+
+    .nge-float-label-textarea textarea{
+        resize: none;
+    }
+
+    .nge-float-label-textarea textarea:focus + label , .nge-float-label-textarea textarea:valid + label
+    {
+        transform: translateY(-310%);
+    }
+
+    
+    /* NAVBAR */
+    .menu li{
+        display: block;
+        justify-content: center;
+        position: relative;
+        padding: 5px 0;
+        height: 100%;
+    }
+
+    .menu li::after {
+        content: '';
+        position: absolute;
+        display: block;
+        border: 0px solid transparent;
+    }
+
+    .menu li::after {
+        position: absolute;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        border-top: 2px solid #fff;
+        transition: all 0.3s ease;
+    }
+
+    .menu li:hover::after {
+        width: 100%;
+    }
+
+    #navbar {
+     transition: all .3s ease-out;
+    }
+    .navbar {
+       transform: translateY(-82%);
+    }
+
+    .navbar-md {
+        transform:none;
+     }
+
+    #background {
+        background-color: rgba(147, 147, 147, 0.5);
+    }
+    .background {
+        visibility: hidden;
+    }
+
+    /* BUBBLE WHATSAPP */
+    .triangle-chat {
+        border-color: transparent white transparent transparent;
+        border-style: solid;
+        border-width: 0px 15px 15px 10px;
+        height: 0px;
+        width: 0px;
+    }
+
+    .whatsapp-custom {
+        visibility: hidden;
+    }
+
+    .whatsapp-custom-open {
+        animation: .5s openChat;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes openChat {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
