@@ -58,6 +58,28 @@
         transform: translateY(-310%);
     }
 
+    /* DROPDOWN */
+
+    .nge-float-dropdown {
+        height: 50px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        background-color: #FFF;
+        /* justify-content: center;
+        align-items: center; */
+    }
+
+    .nge-float-dropdown label{
+        position: absolute;
+        left: 0;
+        top: 0;
+        padding: 0 theme(padding.4);
+        pointer-events: none;
+        color: theme('colors.gray-dark');
+        transition: all .5s ease;
+    }
     
     /* NAVBAR */
     .menu li{

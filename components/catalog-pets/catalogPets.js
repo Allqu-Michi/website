@@ -122,7 +122,6 @@ function CatalogPets() {
     let value = ''
     switch (count) {
       case 0:
-        
           value = 'md:row-span-2'
         break;
       case 7:
@@ -131,7 +130,6 @@ function CatalogPets() {
       case 11:
         value = 'md:row-span-2'
         break;
-      
     }
     if(count==14){
       count = 0;
