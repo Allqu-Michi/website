@@ -16,9 +16,9 @@ function ContactMain(props) {
             <span className='text-blue font-bold text-4xl'>Contáctanos</span>
             <div className='grid grid-cols-4 w-fit gap-5'>
                 <Image alt="Allqu & Michi" src='/static/icons/facebook-blue.svg' className='cursor-pointer' width={28} height={28}/>
-                <Image alt="Allqu & Michi" src='/static/icons/instagram-blue.svg' className='cursor-pointer' width={28} height={28}/>
+                <Image alt="Allqu & Michi" src='/static/icons/instagram-blue-outline.svg' className='cursor-pointer' width={28} height={28}/>
                 <Image alt="Allqu & Michi" src='/static/icons/tiktok-blue.svg' className='cursor-pointer' width={24.5} height={28}/>
-                <Image alt="Allqu & Michi" src='/static/icons/whatsapp-blue.svg' className='cursor-pointer' width={27.87} height={28}/>
+                <Image alt="Allqu & Michi" src='/static/icons/whatsapp-blue-outline.svg' className='cursor-pointer' width={27.87} height={28}/>
             </div>
             <p className='text-white'>¿Te gustaría apoyar este proyecto o te gustaría contribuir con ideas para Allqu & Michi? Escríbenos</p>
             <form className='w-full grid md:grid-cols-2 gap-2'>
@@ -49,7 +49,7 @@ function ContactMain(props) {
         </div>
         <div className='flex flex-col md:flex-row gap-3 items-center text-white'>
           <span>Powerder By</span>
-          <img className='cursor-pointer' alt="Allqu & Michi" src='/static/images/nogheric-white.png' width={120} height={40}/>
+          <a href="https://nogheric.com/" target={'_blank'}><img className='cursor-pointer' alt="Allqu & Michi" src='/static/images/nogheric-white.png' width={120} height={40}/></a>
         </div>
     </div>
   )

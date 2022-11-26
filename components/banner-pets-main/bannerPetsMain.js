@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import React, { useEffect, useRef } from 'react'
+import Link from 'next/link';
+import React, { useEffect, useRef, useState } from 'react'
 
 function BannerPetsMain() {
   const ref = useRef(null);
-  let value ;
-  let sliders;
-  const data = [
+
+  const [data, setData] = useState([
     {
       name: 'Leona',
       age: '7 meses',
@@ -36,7 +36,18 @@ function BannerPetsMain() {
       favorite: true,
       image: '/static/images/3-pet.png'
     }
-  ]
+  ]);
+
+  let value ;
+  let sliders;
+
+  function validFavoriteIcon(favorite){
+    if(favorite){
+      return '/static/icons/heart-black.svg'
+    }else{
+      return '/static/icons/heart-gray-outline.svg'
+    }
+  }
 
   useEffect(() => {
      sliders = [...ref.current.querySelectorAll('.slider-section')];
@@ -44,7 +55,7 @@ function BannerPetsMain() {
       changePosition(1);
     }, 5000);
     return () => clearInterval(interval); 
-  },[ref]);
+  },[ref,data]);
 
   function changePosition(change){
     const currentElement = Number(document.querySelector('.show').dataset.id);
@@ -68,7 +79,7 @@ function BannerPetsMain() {
   return (
     <div ref={ref} className='h-full py-16 px-5 flex flex-col gap-6 items-center'>
       <span className='text-4xl font-bold text-blue text-center'>Conoce a tu futuro(a) mejor amigo(a)</span>
-      <span>Mira todo nuestros peluditos <a href='#'><b>aqui</b></a></span>
+      <span>Mira todo nuestros peluditos <Link href='/catalog'><b>aqui</b></Link></span>
       <div className='grid grid-cols-bannerpets justify-between'>
         <div className='flex justify-start cursor-pointer' id='before' onClick={clickBefore}>
             <Image src='/static/icons/left.svg' alt='Allqu & Michi' width={15} height={35}/>
@@ -86,8 +97,11 @@ function BannerPetsMain() {
                     <span className='font-bold text-3xl'>{item.name}</span>
                     <span>{item.age}</span>
                   </div>
-                  <div className='cursor-pointer'>
-                    <Image src="/static/icons/heart-gray.svg" alt="Allqu & Michi" width={16.5} height={16.5}/>
+                  <div className='cursor-pointer' onClick={()=>{
+                    data[i].favorite = !data[i].favorite;
+                    setData([...data]);
+                  }}>
+                    <Image src={validFavoriteIcon(item.favorite)} alt="Allqu & Michi" width={16.5} height={16.5}/>
                   </div>
                 </div>
                 <div>

@@ -34,7 +34,7 @@ function Dropdown(props) {
             <div className='relative cursor-pointer' ref={dropdownRef}>
                 <div onClick={() => setDeploy(!deploy)} className='nge-float-dropdown rounded-2xl outline-none pt-6 pb-1 px-4 h-full w-full'>
                     <label>{props.placeholder}</label>
-                    <div>
+                    <div className='text-blue'>
                         {(optionSelected == null) ? 'Elija una opción' : optionSelected[props.name]}
                     </div>
                     <img className='absolute right-3 bottom-3 cursor-pointer' src="/static/icons/down-arrow.svg" alt="Allqu & Michi" width={10} height={7} />

@@ -44,7 +44,7 @@ function NavbarMain() {
                 <div>
                     <button type="submit" className='bg-blue rounded-2xl px-4 py-2 flex flex-row items-center gap-1.5'>
                         <span className='font-bold'>Apoya</span>
-                        <Image src="/static/icons/heart.svg" alt="Allqu & Michi" width={16.5} height={16.5}/>
+                        <Image src="/static/icons/heart-white-outline.svg" alt="Allqu & Michi" width={16.5} height={16.5}/>
                     </button>
                 </div>
             </div>

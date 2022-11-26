@@ -14,7 +14,7 @@ function BubbleWhatsapp() {
   return (
     <React.Fragment>
       <div onClick={toggleChat} className='w-16 h-16 rounded-full fixed bottom-0 right-0 m-6 z-40 bg-green-whatsapp shadow-2xl shadow-gray-300 flex justify-center cursor-pointer'>
-        <Image alt="Allqu & Michi" src='/static/icons/whatsapp-white.svg' width={30} height={30}/>
+        <Image alt="Allqu & Michi" src='/static/icons/whatsapp-white-outline.svg' width={30} height={30}/>
       </div>
       <div id='chat-whatsapp' className='whatsapp-custom fixed right-0 bottom-20 m-6 z-50 rounded-3xl shadow-2xl shadow-gray-300 flex flex-col w-64 bg-white'>
         <div className='bg-green rounded-t-3xl flex gap-2 py-2 px-4 items-center header-whatsapp'>
@@ -40,7 +40,7 @@ function BubbleWhatsapp() {
           </div>
         </div>
         <div onClick={redirect} className='rounded-b-3xl bg-green text-white py-2 px-4 flex justify-center items-center gap-2 cursor-pointer'>
-          <span>Chatear</span> <Image alt="Allqu & Michi" src='/static/icons/whatsapp-white.svg' width={15} height={15}/>
+          <span>Chatear</span> <Image alt="Allqu & Michi" src='/static/icons/whatsapp-white-outline.svg' width={15} height={15}/>
         </div>
       </div>
     </React.Fragment>

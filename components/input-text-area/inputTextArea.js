@@ -13,7 +13,7 @@ function InputTextArea(props) {
         maxLength={props.maxLength}
         minLength={props.minLength}
         onChange={onChange} 
-        className='rounded-2xl outline-none pt-6 pb-1 px-4 w-full h-full absolute' required/>
+        className='rounded-2xl outline-none pt-6 pb-1 px-4 w-full h-full absolute text-blue' required/>
     </React.Fragment>
   )
 }

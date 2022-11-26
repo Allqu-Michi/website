@@ -54,8 +54,8 @@ function BannerMain() {
               </div>
               <span className='text-xl'>Somos Allqu y Michi, y te ayudamos a encontrar a tu nuevo mejor amigo.</span>
               <div className='flex flex-row gap-2.5'>
-                  <button type='submit' className='bg-blue rounded-2xl px-3 py-2'><Link href="/catalog">¡Quiero Adoptar!</Link></button>
-                  <button type='submit' className='border-blue border-2 text-blue rounded-2xl px-3 py-2'>Dar en Adopción</button>
+              <Link href="/catalog"><button type='submit' className='border-blue border-2 bg-blue rounded-2xl px-3 py-2'>¡Quiero Adoptar!</button></Link>
+              <Link href="/"><button type='submit' className='border-blue border-2 text-blue rounded-2xl px-3 py-2'>Dar en Adopción</button></Link>
               </div>
             </div>
           </div>
