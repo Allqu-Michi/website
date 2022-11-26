@@ -23,6 +23,7 @@ module.exports = {
       'pink': '#ff49db',
       'orange': '#FF8C32',
       'green': '#008069',
+      'green-whatsapp': '#00bb2d',
       'yellow': '#ffc82c',
       'gray-dark': '#626262',
       'gray': '#dddddd',

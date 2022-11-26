@@ -24,7 +24,7 @@ function NavbarCatalog() {
                     </div>
                 </Link>
             </div>
-            <div className='flex flex-col md:flex-row gap-4'>
+            <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
                 <div>
                     <button type="submit" className='border-blue border-2 text-blue rounded-2xl px-4 py-2 flex flex-row items-center gap-1.5'>
                         <span className='font-bold'>Dar en Adopción</span>
