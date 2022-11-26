@@ -60,6 +60,7 @@ function HeaderCatalog() {
   ];
 
   return (
+    <React.Fragment>
     <div className='h-full rounded-3xl pt-16 px-4 md:pt-20 md:h-fit'>
         <p className='text-blue font-bold text-4xl'>"El amor es una palabra de cuatro patas, ADOPTA"</p>
         <p className='text-orange'>Somos Allqu y Michi, y te ayudamos a encontrar a tu nuevo mejor amigo.</p>
@@ -67,7 +68,8 @@ function HeaderCatalog() {
             <Dropdown 
             placeholder='Categoría' 
             name='label' 
-            value='id' 
+            value='id'
+          
             options={categoryPets}
             valueDefault={valueCategoryPet}
             />
@@ -75,6 +77,7 @@ function HeaderCatalog() {
             placeholder='Edad' 
             name='label' 
             value='id' 
+         
             options={agePets}
             valueDefault={valueAgePet}
             />
@@ -82,12 +85,14 @@ function HeaderCatalog() {
             placeholder='Tamaño' 
             name='label' 
             value='id' 
+          
             options={sizePets}
             valueDefault={valueSizePet}
             />
         </div>
         {/* <button className='bg-blue text-white p-2 rounded-md' type="submit">FILTRAR</button> */}
     </div>
+    </React.Fragment>
   )
 }
 
