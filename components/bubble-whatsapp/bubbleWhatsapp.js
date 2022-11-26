@@ -13,7 +13,7 @@ function BubbleWhatsapp() {
 
   return (
     <React.Fragment>
-      <div onClick={toggleChat} className='w-16 h-16 rounded-full fixed bottom-0 right-0 m-6 z-40 bg-orange shadow-2xl shadow-gray-300 flex justify-center cursor-pointer'>
+      <div onClick={toggleChat} className='w-16 h-16 rounded-full fixed bottom-0 right-0 m-6 z-40 bg-green shadow-2xl shadow-gray-300 flex justify-center cursor-pointer'>
         <Image alt="Allqu & Michi" src='/static/icons/whatsapp-white.svg' width={30} height={30}/>
       </div>
       <div id='chat-whatsapp' className='whatsapp-custom fixed right-0 bottom-20 m-6 z-50 rounded-3xl shadow-2xl shadow-gray-300 flex flex-col w-64 bg-white'>

@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from "next/document";
+import BubbleWhatsapp from "../components/bubble-whatsapp/bubbleWhatsapp";
 
 export default function Document() {
     return (

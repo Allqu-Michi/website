@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import React from 'react'
+import BubbleWhatsapp from '../components/bubble-whatsapp/bubbleWhatsapp';
 import CatalogPets from '../components/catalog-pets/catalogPets';
 
 import ContactMain from '../components/contactMain/contactMain';
@@ -22,6 +23,7 @@ function Catalog() {
                 <ContactMain bgcolor={'orange'}/>
             </div>
         </div>
+        <BubbleWhatsapp/>
     </React.Fragment>
   )
 }
