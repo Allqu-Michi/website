@@ -23,7 +23,7 @@ function Dropdown(props) {
             props.valueDefault === e[props.value]
         )
         setOptionSelected(result[0])
-    }, []);
+    }, [props]);
 
     useEffect(() => {
         document.addEventListener('mousedown', toggleDropdown)
@@ -39,7 +39,7 @@ function Dropdown(props) {
                     </div>
                     <img className='absolute right-3 bottom-3 cursor-pointer' src="/static/icons/down-arrow.svg" alt="Allqu & Michi" width={10} height={7} />
                 </div>
-                <div className={deploy ? 'z-50 shadow-xl absolute bg-gray-light px-4 py-4 rounded-3xl w-full top-14 duration-200 ease-in-out opacity-1 visible' : 'z-50 absolute bg-gray-light px-4 py-4 rounded-3xl w-full top-[-3%] duration-200 ease-in-out opacity-0 invisible'} id='dropdown-options'>
+                <div className={deploy ? 'z-50 shadow-xl absolute bg-gray-light px-4 py-4 rounded-3xl w-full top-14 duration-100 ease-in-out opacity-1 visible' : 'z-50 absolute bg-gray-light px-4 py-4 rounded-3xl w-full top-[-3%] duration-100 ease-in-out opacity-0 invisible'} id='dropdown-options'>
                     <ol className='flex flex-col gap-1'>
                         {
                             props.options.map((item, index) => (

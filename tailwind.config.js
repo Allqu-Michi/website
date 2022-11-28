@@ -46,7 +46,7 @@ module.exports = {
       },
       colors: {
         'blue-sky': '#85bed4',
-      }
+      },
     }
   },
   plugins: [],

@@ -3,118 +3,97 @@ import React from 'react'
 function CatalogPets() {
 
   let count = 0;
+
   const data = [
     {
       id:1,
-      image: '/static/images/pet-catalog-1.png'
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
       id:2,
-      image: '/static/images/pet-catalog-1.png'
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Leona',
+      age: 'Cachorro',
     },
     {
       id:3,
-      image: '/static/images/pet-catalog-1.png'
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
       id:4,
-      image: '/static/images/pet-catalog-1.png'
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
       id:5,
-      image: '/static/images/pet-catalog-1.png'
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
       id:6,
-      image: '/static/images/pet-catalog-1.png'
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
       id:7,
-      image: '/static/images/pet-catalog-1.png'
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
-      id:1,
-      image: '/static/images/pet-catalog-1.png'
+      id:8,
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
-      id:2,
-      image: '/static/images/pet-catalog-1.png'
+      id:9,
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
-      id:3,
-      image: '/static/images/pet-catalog-1.png'
+      id:10,
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
-      id:4,
-      image: '/static/images/pet-catalog-1.png'
+      id:11,
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
-      id:5,
-      image: '/static/images/pet-catalog-1.png'
+      id:12,
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
-      id:6,
-      image: '/static/images/pet-catalog-1.png'
+      id:13,
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
-      id:7,
-      image: '/static/images/pet-catalog-1.png'
+      id:14,
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
     {
-      id:1,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:2,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:3,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:4,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:5,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:6,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:7,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:1,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:2,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:3,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:4,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:5,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:6,
-      image: '/static/images/pet-catalog-1.png'
-    },
-    {
-      id:7,
-      image: '/static/images/pet-catalog-1.png'
+      id:15,
+      image: '/static/images/pet-catalog-1.png',
+      name: 'Rex',
+      age: 'Cachorro',
     },
   ]
 
@@ -140,15 +119,26 @@ function CatalogPets() {
   }
 
   return (
-    <div className='h-full py-2 px-4 grid md:grid-cols-3 justify-center'>
-      {
-        data.map((item,i)=>(
-          <div key={i} className={`m-2 rounded-3xl overflow-hidden flex justify-center items-center cursor-pointer hover:shadow-lg ${catalogFunc()}`}>
-            <img className='object-cover h-full w-full' src={item.image} alt='Allqu & Michi'/>
-          </div>
-        ))
-      }
-    </div>
+    <React.Fragment>
+      <div className='h-full py-2 px-4 grid md:grid-cols-3 justify-center'>
+        {
+          data.map((item,i)=>(
+            <div key={i} className={`nge-bg-image m-2 rounded-3xl overflow-hidden flex justify-center items-center hover:shadow-lg hover:bg-blue ${catalogFunc()}`}>
+              <div className='nge-detail-image w-full grid grid-cols-2 justify-between items-end absolute bottom-0 transition duration-700 '>
+                <div className='p-4 text-white'>
+                  <p className='font-bold text-2xl'>{item.name}</p>
+                  <p>{item.age}</p>
+                </div>
+                <div className='cursor-pointer bg-orange rounded-tl-3xl w-full h-14 rounded-br-3xl text-white flex items-center justify-center font-bold'>
+                  Conóceme
+                </div>
+              </div>
+              <img className='object-cover h-full w-full' src={item.image} alt='Allqu & Michi'/>
+            </div>
+          ))
+        }
+      </div>
+    </React.Fragment>
   )
 }
 

@@ -156,4 +156,33 @@
             opacity: 1;
         }
     }
+
+    /* CATALOG PETS */
+
+    .nge-bg-image {
+        position: relative;
+    }
+
+    .nge-bg-image:before {
+        opacity: 0;
+    }
+    .nge-bg-image:hover:before {
+        opacity: 1;
+        transition: all .7s ease-in-out;
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: linear-gradient(rgba(255,255,255,0),rgba(0,0,0,0.8));
+    }
+
+    .nge-detail-image {
+        visibility: hidden;
+    }
+
+    .nge-bg-image:hover .nge-detail-image {
+        visibility: visible;
+    }
 }

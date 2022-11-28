@@ -1,27 +1,25 @@
-import React, { useState } from 'react'
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react'
 import Dropdown from '../dropdown/dropdown'
 
 function HeaderCatalog() {
-  const [valueCategoryPet, setValueCategoryPet] = useState();
-  const [valueAgePet, setValueAgePet] = useState();
-  const [valueSizePet, setValueSizePet] = useState();
 
-  let categoryPets = [
-    {
-        id: 1,
-        label: 'Perro' 
-    },
-    {
-        id: 2,
-        label: 'Gato' 
-    },
-    {
-        id: 3,
-        label: 'Todos' 
-    }
-  ];
+    let categoryPets = [
+        {
+            id: 1,
+            label: 'Perro' 
+        },
+        {
+            id: 2,
+            label: 'Gato' 
+        },
+        {
+            id: 3,
+            label: 'Todos' 
+        }
+    ];
 
-  let agePets = [
+    let agePets = [
     {
         id: 1,
         label: 'Cachorro' 
@@ -38,9 +36,9 @@ function HeaderCatalog() {
         id: 4,
         label: 'Todos' 
     }
-  ];
+    ];
 
-  let sizePets = [
+    let sizePets = [
     {
         id: 1,
         label: 'Pequeño' 
@@ -57,7 +55,18 @@ function HeaderCatalog() {
         id: 4,
         label: 'Todos' 
     }
-  ];
+    ];
+
+    const router = useRouter();
+    const [valueCategoryPet, setValueCategoryPet] = useState();
+    const [valueAgePet, setValueAgePet] = useState(router.query.agePets);
+    const [valueSizePet, setValueSizePet] = useState(router.query.sizePets);
+    
+    useEffect(() => {
+    setValueCategoryPet(parseInt(router.query.categoryPets))
+    setValueAgePet(parseInt(router.query.agePets))
+    setValueSizePet(parseInt(router.query.sizePets))
+    }, [router]);
 
   return (
     <React.Fragment>
@@ -66,31 +75,27 @@ function HeaderCatalog() {
         <p className='text-orange'>Somos Allqu y Michi, y te ayudamos a encontrar a tu nuevo mejor amigo.</p>
         <div className='bg-gray-light rounded-xl p-4 grid md:grid-cols-3 gap-2 mt-3'>
             <Dropdown 
-            placeholder='Categoría' 
-            name='label' 
+            placeholder='Categoría'
+            name='label'
             value='id'
-          
             options={categoryPets}
             valueDefault={valueCategoryPet}
             />
             <Dropdown 
-            placeholder='Edad' 
-            name='label' 
-            value='id' 
-         
+            placeholder='Edad'
+            name='label'
+            value='id'
             options={agePets}
             valueDefault={valueAgePet}
             />
             <Dropdown 
-            placeholder='Tamaño' 
-            name='label' 
-            value='id' 
-          
+            placeholder='Tamaño'
+            name='label'
+            value='id'
             options={sizePets}
             valueDefault={valueSizePet}
             />
         </div>
-        {/* <button className='bg-blue text-white p-2 rounded-md' type="submit">FILTRAR</button> */}
     </div>
     </React.Fragment>
   )
