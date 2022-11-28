@@ -133,7 +133,7 @@ function CatalogPets() {
                   Conóceme
                 </div>
               </div>
-              <img className='object-cover h-full w-full' src={item.image} alt='Allqu & Michi'/>
+              <img className='object-cover h-full w-full' src={item.image} alt='Allqu & Michii'/>
             </div>
           ))
         }
