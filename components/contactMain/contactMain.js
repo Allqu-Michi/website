@@ -49,7 +49,7 @@ function ContactMain(props) {
         </div>
         <div className='flex flex-col md:flex-row gap-3 items-center text-white'>
           <span>Powerder By</span>
-          <a href="https://nogheric.com/" target={'_blank'}><img className='cursor-pointer' alt="Allqu & Michi" src='/static/images/nogheric-white.png' width={120} height={40}/></a>
+          <a href="https://nogheric.com/" target={'_blank'} rel="noreferrer"><img className='cursor-pointer' alt="Allqu & Michi" src='/static/images/nogheric-white.png' width={120} height={40}/></a>
         </div>
     </div>
   )
