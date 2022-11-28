@@ -71,8 +71,10 @@ function HeaderCatalog() {
   return (
     <React.Fragment>
     <div className='h-full rounded-3xl pt-16 px-4 md:pt-20 md:h-fit'>
+        <div className='md:w-128'>
         <p className='text-blue font-bold text-4xl'>"El amor es una palabra de cuatro patas, ADOPTA"</p>
         <p className='text-orange'>Somos Allqu y Michi, y te ayudamos a encontrar a tu nuevo mejor amigo.</p>
+        </div>
         <div className='bg-gray-light rounded-xl p-4 grid md:grid-cols-3 gap-2 mt-3'>
             <Dropdown 
             placeholder='Categoría'

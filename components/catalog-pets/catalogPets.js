@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-function CatalogPets() {
-
+function CatalogPets(props) {
+  
   let count = 0;
 
   const data = [
@@ -118,22 +118,30 @@ function CatalogPets() {
     return value;
   }
 
+  useEffect(() => {
+    console.log(props.pets.message)
+  }, []);
+
   return (
     <React.Fragment>
       <div className='h-full py-2 px-4 grid md:grid-cols-3 justify-center'>
         {
-          data.map((item,i)=>(
-            <div key={i} className={`nge-bg-image m-2 rounded-3xl overflow-hidden flex justify-center items-center hover:shadow-lg hover:bg-blue ${catalogFunc()}`}>
+          props.pets.message.map((item,i)=>(
+            <div key={i} className={`nge-bg-image m-2 rounded-3xl overflow-hidden flex justify-center items-center hover:shadow-lg hover:bg-orange ${catalogFunc()}`}>
               <div className='nge-detail-image w-full grid grid-cols-2 justify-between items-end absolute bottom-0 transition duration-700 '>
                 <div className='p-4 text-white'>
-                  <p className='font-bold text-2xl'>{item.name}</p>
-                  <p>{item.age}</p>
+                  <p className='font-bold text-2xl'>
+                    {/* {item.name} */} Firulais
+                  </p>
+                  <p>
+                    {/* {item.age} */} Cachorro
+                  </p>
                 </div>
                 <div className='cursor-pointer bg-orange rounded-tl-3xl w-full h-14 rounded-br-3xl text-white flex items-center justify-center font-bold'>
                   Conóceme
                 </div>
               </div>
-              <img className='object-cover h-full w-full' src={item.image} alt='Allqu & Michi' width={100} height={100}/>
+              <img className='object-cover h-full w-full' src={item} alt='Allqu & Michi' width={100} height={100}/>
             </div>
           ))
         }
@@ -141,5 +149,7 @@ function CatalogPets() {
     </React.Fragment>
   )
 }
+
+
 
 export default CatalogPets

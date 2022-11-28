@@ -7,7 +7,7 @@ import ContactMain from '../components/contactMain/contactMain';
 import HeaderCatalog from '../components/header-catalog/headerCatalog';
 import NavbarCatalog from '../components/navbar-catalog/navbarCatalog';
 
-function Catalog() {
+function Catalog(props) {
   return (
     <React.Fragment>
       <Head>
@@ -19,7 +19,7 @@ function Catalog() {
           <NavbarCatalog/>
             <div className='pb-10 flex flex-col gap-10'>
                 <HeaderCatalog/>
-                <CatalogPets/>
+                <CatalogPets pets={props.pets}/>
                 <ContactMain bgcolor={'orange'}/>
             </div>
         </div>
@@ -27,5 +27,21 @@ function Catalog() {
     </React.Fragment>
   )
 }
+
+export async function getServerSideProps() {
+  console.log('entro aqui')
+  try {
+    const res = await fetch('https://dog.ceo/api/breed/hound/images/random/15')
+    const pets = await res.json()
+    return {
+      props:{
+        pets:pets
+      }
+    }
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 
 export default Catalog
