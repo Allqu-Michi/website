@@ -41,6 +41,11 @@ a {
   pointer-events: none;
 }
 
+.slider-section-detail {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .show {
   opacity: 1;
   pointer-events: unset;
@@ -52,6 +57,11 @@ a {
 }
 
 .show-about {
+  opacity: 1;
+  pointer-events: unset;
+}
+
+.show-detail {
   opacity: 1;
   pointer-events: unset;
 }

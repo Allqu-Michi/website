@@ -18,6 +18,10 @@ function BannerMain() {
     {
       text: '"Cuando todos los animales se hayan ido, el hombre morirá de soledad."',
       image:'/static/images/3-carousel.png'
+    },
+    {
+      text: '"Cuando todos los animales se hayan ido, el hombre morirá de soledad."',
+      image:'/static/images/3-carousel.png'
     }
   ];
 
