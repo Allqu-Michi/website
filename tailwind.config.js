@@ -47,6 +47,17 @@ module.exports = {
       colors: {
         'blue-sky': '#85bed4',
       },
+      width: {
+        'custom-navbar': 'calc(100% - 2rem)',
+        'custom-administrator': 'calc(100% - 2rem)'
+      },
+      height: {
+        'custom-administrator': 'calc(100vh - 144px)'
+      },
+      minHeight: {
+        'custom-administrator': 'calc(100vh - 48px)',
+        'custom-administrator-content': 'calc(100vh - 144px)'
+      }
     }
   },
   plugins: [],

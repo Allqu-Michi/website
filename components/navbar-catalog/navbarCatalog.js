@@ -12,7 +12,7 @@ function NavbarCatalog() {
 
   return (
     <React.Fragment>
-        <div id='navbar' onClick={toggleMenu} className='md:navbar-md navbar h-fit md:h-fit z-50 shadow-lg md:shadow-none w-custom fixed bg-white text-white rounded-b-3xl px-5 md:px-20 py-3 flex flex-col md:flex-row md:justify-between gap-4 items-center'>
+        <div id='navbar' onClick={toggleMenu} className='md:navbar-md navbar h-fit md:h-fit z-50 shadow-lg md:shadow-none w-custom-navbar fixed bg-white text-white rounded-b-3xl px-5 md:px-20 py-3 flex flex-col md:flex-row md:justify-between gap-4 items-center'>
             <div className='flex flex-row justify-between w-full md:w-fit items-center'>
                 <div className='block md:hidden cursor-pointer' onClick={toggleMenu}>
                     <Image src='/static/icons/menu-blue.svg' alt="Allqu & Michi" width={30.86} height={18}/>
@@ -38,7 +38,7 @@ function NavbarCatalog() {
             </div>
         </div>
 
-        <div className='md:hidden h-fit z-50 w-custom fixed bg-white text-white rounded-b-3xl px-5 md:px-20 py-3 flex flex-col md:flex-row md:justify-between gap-4 items-center'>
+        <div className='md:hidden h-fit z-50 w-custom-navbar fixed bg-white text-white rounded-b-3xl px-5 md:px-20 py-3 flex flex-col md:flex-row md:justify-between gap-4 items-center'>
             <div className='flex flex-row justify-between w-full md:w-fit items-center'>
                 <div className='block md:hidden cursor-pointer' onClick={toggleMenu}>
                     <Image src='/static/icons/menu-blue.svg' alt="Allqu & Michi" width={30.86} height={18}/>
